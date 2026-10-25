@@ -1,3 +1,7 @@
+#include <behaviors.dtsi>
+#include <behaviors/num_word.dtsi> // Requires zmk-auto-layer module.
+#include <zmk-helpers/helper.h> // Requires zmk-helpers module.
+#include <dt-bindings/zmk/keys.h>
 
 #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                                      \
     ZMK_LAYER(                                                                                    \
@@ -6,7 +10,7 @@
     &kp GRAVE                                     LT                                                                                                  RT                                    &kp BSPC    \
     &kp TAB                                       LM                                                                                                  RM                                    &kp SQT     \
     &none                                         LB                                    &kp LBKT        &kp RBKT                                      RB                                    &kp EQUAL   \
-                                              &none         SMART_SHIFT             LH                             RH               SMART_SHIFT   &none       )
+                                              &none         MAGIC_SHIFT             LH                             RH               MAGIC_SHIFT   &none       )
 
 #define CONFIG_WIRELESS
 #define LILY58_STANDARD_LABELS
