@@ -6,22 +6,22 @@
 
 /* Global defaults */
 
-#define QUICK_TAP_MS 175
-
-&sk {
-  release-after-ms = <900>;
-  quick-release;
-};
-
-&sl { // Allow sticky mods to chord across sticky layers.
-  ignore-modifiers;
-};
-
-&lt {
-  flavor = "balanced";
-  tapping-term-ms = <200>;
-  quick-tap-ms = <QUICK_TAP_MS>;
-};
+// #define QUICK_TAP_MS 175
+//
+// &sk {
+//   release-after-ms = <900>;
+//   quick-release;
+// };
+//
+// &sl { // Allow sticky mods to chord across sticky layers.
+//   ignore-modifiers;
+// };
+//
+// &lt {
+//   flavor = "balanced";
+//   tapping-term-ms = <200>;
+//   quick-tap-ms = <QUICK_TAP_MS>;
+// };
 
 /* Magic-shift & auto-layers */
 
