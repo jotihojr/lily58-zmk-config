@@ -184,8 +184,7 @@ ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS) // FN + NUM --> SYS.
                                            LT                                                                                                                RT                                         \
                                            LM                                                                                                                RM                                         \
                                            LB                                                                                                                RB                                         \
-                                           LH                                                                                                                RH                                         \
-		)
+                                           LH                                                                                                                RH)
 #endif
 
 ZMK_BASE_LAYER(base,
