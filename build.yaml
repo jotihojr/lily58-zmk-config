@@ -8,15 +8,15 @@
 # shield: [ "corne_left", "corne_right" ]
 # include:
 #   - board: bdn9_rev2
-#   - board: nice_nano_v2
+#   - board: nice_nano_v2 => nice_neno@2.0.0//zmk
 #     shield: reviung41
 #
 ---
 include:
-  - board: nice_nano
+  - board: nice_nano@2.0.0//zmk
     shield: lily58_left nice_view_adapter nice_view
   #snippet: studio-rpc-usb-uart
-  - board: nice_nano
+  - board: nice_nano@2.0.0//zmk
     shield: lily58_right nice_view_adapter nice_view
-  - board: nice_nano
+  - board: nice_nano@2.0.0//zmk
     shield: settings_reset
