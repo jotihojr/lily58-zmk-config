@@ -2,7 +2,7 @@
     ZMK_LAYER(                                                                                    \
         name,                                                                                     \
     &kp ESC       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                                      &kp N6        &kp N7        &kp N8        &kp N9        &kp N0        &kp MINUS   \
-    &kp GRAVE                                     LT                                                                                                  RT                                    &kp BSPC    \
+    &kp GRAVE                                     LT                                                                                                  RT                                    &kp BSLH    \
     &kp TAB                                       LM                                                                                                  RM                                    &kp SQT     \
     &none                                         LB                                    &kp LBKT        &kp RBKT                                      RB                                    &kp EQUAL   \
                                               &none         &none            LH                              RH               &none   &none)
