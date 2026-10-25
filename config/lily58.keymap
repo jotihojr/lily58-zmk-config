@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <behaviors/num_word.dtsi> // Requires zmk-auto-layer module.
 #include <zmk-helpers/helper.h> // Requires zmk-helpers module.
+#include <dt-bindings/zmk/keys.h>
 
 // Tap: num-word | double-tap: sticky num-layer | Hold: num-layer.
 #define SMART_NUM &smart_num NUM 0
