@@ -1,4 +1,14 @@
-#define CONFIG_WIRELESS
+#include <behaviors.dtsi>
+#include <behaviors/num_word.dtsi> // Requires zmk-auto-layer module.
+#include <zmk-helpers/helper.h> // Requires zmk-helpers module.
+
+// Tap: num-word | double-tap: sticky num-layer | Hold: num-layer.
+#define SMART_NUM &smart_num NUM 0
+ZMK_HOLD_TAP(smart_num, bindings = <&mo>, <&num_dance>; flavor = "balanced";
+             tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
+ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
+              tapping-term-ms = <200>;)
+
 #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                                      \
     ZMK_LAYER(                                                                                    \
         name,                                                                                     \
@@ -11,10 +21,11 @@
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮ ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &none                                         LB                                    &kp LBKT        &kp RBKT                                      RB                                    &kp EQUAL   \
 //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                              SMART_NUM     MAGIC_SHIFT              LH                             RH              MAGIC_SHIFT   SMART_NUM   \
+                                              SMART_NUM     &none                    LH                             RH              &none         SMART_NUM   \
 //                                          ╰─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────╯
 )
 
+#define CONFIG_WIRELESS
 #define LILY58_STANDARD_LABELS
 #include "zmk-helpers/key-labels/lily58.h"
 #include "base.keymap"
