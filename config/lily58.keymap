@@ -8,13 +8,6 @@
   ╰───────────╮ 50  51  52  53 │ 54  55  56  57 ╭───────────╯ ╰───────────╮ LH3 LH2 LH1 LH0 │ RH0 RH1 RH2 RH3 ╭───────────╯
               ╰────────────────┴────────────────╯                         ╰─────────────────┴─────────────────╯             */
 
-#define	FULLSCREEN                    \
-	ZMK_MACRO(fullscreen,             \
-		wait-ms = <30>;               \
-		tap-ms = <40>;                \
-		bindings = <&kp GLOBE &kp F>; \
-	)
-
 #define ZMK_BASE_LAYER(name, LN, RN, LT, RT, LM, RM, LB, RB, LH, RH) \
     ZMK_LAYER(                                                       \
         name,                                                        \
