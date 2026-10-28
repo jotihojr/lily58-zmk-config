@@ -83,6 +83,8 @@ ZMK_HOLD_TAP(mt_end, bindings = <&masked_end>, <&kp>; MT_CORE)
 #define NAV_DOWN  &mt LC(END)  DOWN  // Tap: down  | Long-tap: end   of doc.
 #define NAV_BSPC  &mt LC(BSPC) BSPC  // Tap: bspc  | Long-tap: delete word bwd.
 #define NAV_DEL   &mt LC(DEL)  DEL   // Tap: del   | Long-tap: delete word fwd.
+#define TAB_NEXT  &kp RC(RS(TAB))
+#define TAB_PREV  &kp RC(TAB)
 
 // Mask CTRL on left/right hold to avoid accidental jumps to start/end of doc.
 #define MASK_MODS(NAME, MODS, BINDING)                                         \
@@ -175,12 +177,16 @@ ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 
 // Misc aliases. [TODO: clean up]
 #define CANCEL    &kp K_CANCEL            // Cancel caps-word & auto-layers.
+#define HIS_PREV  &kp LG(LBKT)            // Browser back in history
+#define HIS_NEXT  &kp LG(LBKT)            // Browser forward in history
 #define DSK_PREV  &hmr LCTRL LG(LC(LEFT)) // Previous desktop.
 #define DSK_NEXT  &hmr LALT LG(LC(RIGHT)) // Next     desktop.
 #define PIN_WIN   &kp LG(LC(LS(Q)))       // Pin window across desktops.
 #define PIN_APP   &kp LG(LC(LS(A)))       // Pin application across desktops.
 #define DSK_MGR   &kp LA(GRAVE)           // Desktop manager.
 #define VOL_DOWN  &hmr RSHFT C_VOL_DN
+#define VOL_UP    &hmr RGUI C_VOL_UP
+#define MEDIA_NEXT &hmr RCTRL C_NEXT      // next track (i.e. apple music)
 
 /* Keymap */
 
@@ -209,11 +215,11 @@ ZMK_BASE_LAYER(navi,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                             ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
     ___           ___           ___           ___           ___           ___         ,                               ___           ___           ___           ___           ___           ___         ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                             ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    ___           &kp LA(F4)    ___           &kp LS(TAB)   &swapper      ___         ,                               ___           &kp PG_DN     &kp PG_UP     NAV_BSPC      NAV_DEL       ___         ,
+    ___           &kp LA(F4)    ___           ___           &swapper      ___         ,                               ___           &kp PG_DN     &kp PG_UP     NAV_BSPC      NAV_DEL       ___         ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                             ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     ___           &sk LALT      &sk LCTRL     &sk LGUI      &sk LSHFT     ___         ,                               NAV_LEFT      NAV_DOWN      NAV_UP        NAV_RIGHT     ___           ___         ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮ ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    ___           ___           ___           &kp LG(LBKT)  &kp LG(RBKT)  ___           ___         ,   ___           &kp INS       &kp RC(RS(TAB)) &kp RC(TAB) ___           ___           ___         ,
+    ___           ___           ___           HIS_PREV      HIS_PREV      ___           ___         ,   ___           ___           TAB_PREV      TAB_PREV      ___           ___           ___         ,
 //╰─────────────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                               ___           ___           ___           ___         ,   ___           ___           ___           CANCEL
 //                                          ╰─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────╯
