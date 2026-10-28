@@ -83,8 +83,8 @@ ZMK_HOLD_TAP(mt_end, bindings = <&masked_end>, <&kp>; MT_CORE)
 #define NAV_DOWN  &mt LC(END)  DOWN  // Tap: down  | Long-tap: end   of doc.
 #define NAV_BSPC  &mt LC(BSPC) BSPC  // Tap: bspc  | Long-tap: delete word bwd.
 #define NAV_DEL   &mt LC(DEL)  DEL   // Tap: del   | Long-tap: delete word fwd.
-#define TAB_NEXT  &kp RC(RS(TAB))
-#define TAB_PREV  &kp RC(TAB)
+#define TAB_NEXT  &kp RC(TAB)
+#define TAB_PREV  &kp RC(RS(TAB))
 
 // Mask CTRL on left/right hold to avoid accidental jumps to start/end of doc.
 #define MASK_MODS(NAME, MODS, BINDING)                                         \
@@ -178,7 +178,7 @@ ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 // Misc aliases. [TODO: clean up]
 #define CANCEL    &kp K_CANCEL            // Cancel caps-word & auto-layers.
 #define HIS_PREV  &kp LG(LBKT)            // Browser back in history
-#define HIS_NEXT  &kp LG(LBKT)            // Browser forward in history
+#define HIS_NEXT  &kp LG(RBKT)            // Browser forward in history
 #define DSK_PREV  &hmr LCTRL LG(LC(LEFT)) // Previous desktop.
 #define DSK_NEXT  &hmr LALT LG(LC(RIGHT)) // Next     desktop.
 #define PIN_WIN   &kp LG(LC(LS(Q)))       // Pin window across desktops.
