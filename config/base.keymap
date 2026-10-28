@@ -177,7 +177,7 @@ ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 
 // Misc aliases. [TODO: clean up]
 #define CANCEL    &kp K_CANCEL            // Cancel caps-word & auto-layers.
-#define HIS_PREV  &kp LG(LBKT)            // Browser back in history
+#define HIS_PREV  &kp RG(LBKT)            // Browser back in history
 #define HIS_NEXT  &kp LG(RBKT)            // Browser forward in history
 #define DSK_PREV  &hmr LCTRL LG(LC(LEFT)) // Previous desktop.
 #define DSK_NEXT  &hmr LALT LG(LC(RIGHT)) // Next     desktop.
