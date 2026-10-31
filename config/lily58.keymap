@@ -18,6 +18,7 @@
                       LH               RH                            \
 	)
 
+#define HOST_ID 2
 #define CONFIG_WIRELESS
 #define LILY58_STANDARD_LABELS
 #include "zmk-helpers/key-labels/lily58.h"
