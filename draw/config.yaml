@@ -24,9 +24,9 @@ parse_config:
     "&kp LG(LBKT)": Back His
     "&kp LG(RBKT)": Next His
 
-    "&kp LC(INS)": Copy
-    "&kp LC(X)": Cut
-    "&kp LS(INS)": Paste
+    "&kp LC(INS)": $$mdi:content-copy$$
+    "&kp LC(X)": $$mdi:content-cut$$
+    "&kp LS(INS)": $$mdi:content-paste$$
 
     "&kp LG(LC(LEFT))": PDesk
     "&kp LG(LC(RIGHT))": NDesk
@@ -40,7 +40,7 @@ parse_config:
     "&magic_shift": { "t": Magic, "h": "Shift" }
     "&smart_mouse": Smart Mouse
 
-    "&hml LS(LALT)TAB": Tab
+    "&hml LS(LALT)TAB": $$mdi:keyboard-tab$$
     "&hm_combo_ldr": Leader
     "&hm_combo_ldrsh": Shift+Leader
     "&hm_combo_lpar": { "t": "< (" }
@@ -77,21 +77,22 @@ parse_config:
 
   zmk_keycode_map:
     # custom mappings
-    LALT: Alt
-    RALT: Alt
-    LCTRL: Ctrl
-    RCTRL: Ctrl
-    LGUI: Gui
-    RGUI: Gui
-    LSHFT: Shift
-    RSHFT: Shift
+    LALT: $$mdi:apple-keyboard-option$$
+    RALT: $$mdi:apple-keyboard-option$$
+    LCTRL: $$mdi:apple-keyboard-control$$
+    RCTRL: $$mdi:apple-keyboard-control$$
+    LGUI: $$mdi:apple-keyboard-command$$
+    RGUI: $$mdi:apple-keyboard-command$$
+    LSHFT: $$mdi:apple-keyboard-shift$$
+    RSHFT: $$mdi:apple-keyboard-shift$$
+    GLOBE: $$mdi:web$$
 
-    BSPC: Bspc
-    DEL: Del
+    BSPC: $$mdi:backspace-outline$$
+    DEL: $$mdi:backspace-reverse-outline$$
     ESC: Esc
-    RET: Enter
-    SPACE: Spc
-    TAB: Tab
+    RET: $$mdi:keyboard-return$$
+    SPACE: $$mdi:keyboard-space$$
+    TAB: $$mdi:keyboard-tab$$
 
     PG_UP: PgUp
     PG_DN: PgDn
@@ -105,6 +106,8 @@ parse_config:
     RIGHT: →
 
     K_CANCEL: Cancel
+    KP_DIVIDE: $$mdi:division$$
+    KP_MULTIPLY: $$mdi:multiplication$$
 
     C_MUTE: $$mdi:volume-off$$
     C_PP: $$mdi:play-pause$$
@@ -182,7 +185,7 @@ parse_config:
 draw_config:
   append_colon_to_layer_header: false
   dark_mode: false
-  footer_text: "urob/zmk-config"
+  footer_text: "jotihojr/lily58-zmk-config"
   glyph_tap_size: 15
   glyph_hold_size: 12
   glyph_shifted_size: 10
@@ -247,7 +250,7 @@ draw_config:
     rect.held, rect.combo.held                { fill: var(--color-held); }
     .layer-Combos rect.key                    { fill: var(--color-ghost); }
 
-    path.combo { stroke: var(--color-dendron); stroke-width: 2; stroke-dasharray: 2, 3; opacity: 0.45; fill: none; }
+    path.combo { stroke: var(--color-dendron); stroke-width: 2; stroke-dasharray: 2, 3; opacity: 1.0; fill: none; }
 
     text.tl, use.tl { fill: var(--color-fn); }
     text.tr, use.tr { fill: var(--color-nav); }
