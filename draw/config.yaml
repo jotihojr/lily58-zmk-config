@@ -3,7 +3,8 @@ parse_config:
     - "modules/zmk/helpers/include"
 
   zmk_preamble: |
-    #include <zmk-helpers/key-labels/34.h>
+    #define LILY58_STANDARD_LABELS
+    #include <zmk-helpers/key-labels/lily58.h>
     #define CONFIG_WIRELESS
 
   raw_binding_map:
@@ -17,6 +18,11 @@ parse_config:
     "&bt BT_SEL 2": BT3
     "&bt BT_SEL 3": BT4
     "&bt BT_SEL 4": BT5
+
+    "&kp RC(TAB)": Next Tab
+    "&kp RC(RS(TAB))": Prev Tab
+    "&kp LG(LBKT)": Back His
+    "&kp LG(RBKT)": Next His
 
     "&kp LC(INS)": Copy
     "&kp LC(X)": Cut
