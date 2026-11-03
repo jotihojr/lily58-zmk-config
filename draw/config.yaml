@@ -21,7 +21,7 @@ parse_config:
 
     "&kp RC(TAB)": Next Tab
     "&kp RC(RS(TAB))": Prev Tab
-    "&kp LG(LBKT)": Back His
+    "&kp RG(LBKT)": Back His
     "&kp LG(RBKT)": Next His
 
     "&kp LC(INS)": $$mdi:content-copy$$
@@ -185,7 +185,7 @@ parse_config:
 draw_config:
   append_colon_to_layer_header: false
   dark_mode: false
-  footer_text: "jotihojr/lily58-zmk-config"
+  footer_text: "lily58-zmk-config"
   glyph_tap_size: 15
   glyph_hold_size: 12
   glyph_shifted_size: 10
