@@ -93,7 +93,7 @@ draw: _check_yq_version
         def extract_label: if type == "string" then . else .t end;
         def is_transparent: type == "object" and (.type == "trans" or .type == "held");
         .layers = {
-        Base: [
+        base: [
             [.layers.base, .layers.navi, .layers.func, .layers.numb, .layers.syst] | transpose[] |
             (.[0] | if type == "string" then {t: .} else . end) as $base |
             (.[1] | if is_transparent then null else extract_label end) as $nav |
