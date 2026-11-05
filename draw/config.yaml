@@ -11,18 +11,18 @@ parse_config:
     "&sys_reset": Reset
     "&bootloader": Boot
     "&caps_word": Caps Word
-    "&kp LA(F4)": Close
+    "&kp LA(F4)": $$mdi:close-box-outline$$
 
-    "&bt BT_SEL 0": BT1
-    "&bt BT_SEL 1": BT2
-    "&bt BT_SEL 2": BT3
-    "&bt BT_SEL 3": BT4
-    "&bt BT_SEL 4": BT5
+    "&bt BT_SEL 0": $$mdi:bluetooth$$ 1
+    "&bt BT_SEL 1": $$mdi:bluetooth$$ 2
+    "&bt BT_SEL 2": $$mdi:bluetooth$$ 3
+    "&bt BT_SEL 3": $$mdi:bluetooth$$ 4
+    "&bt BT_SEL 4": $$mdi:bluetooth$$ 5
 
-    "&kp RC(TAB)": Tab→
-    "&kp RC(RS(TAB))": Tab←
-    "&kp RG(LBKT)": His←
-    "&kp LG(RBKT)": His→
+    "&kp RC(TAB)": $$mdi:tab-plus$$
+    "&kp RC(RS(TAB))": $$mdi:tab-minus$$
+    "&kp RG(LBKT)": $$mdi:history$$
+    "&kp LG(RBKT)": $$mdi:update$$
 
     "&kp LC(INS)": $$mdi:content-copy$$
     "&kp LC(X)": $$mdi:content-cut$$
@@ -94,8 +94,8 @@ parse_config:
     SPACE: $$mdi:keyboard-space$$
     TAB: $$mdi:keyboard-tab$$
 
-    PG_UP: PgUp
-    PG_DN: PgDn
+    PG_UP: $$mdi:arrow-collapse-up$$
+    PG_DN: $$mdi:arrow-collapse-down$$
     INS: Ins
     HOME: Home
     END: End
@@ -105,7 +105,7 @@ parse_config:
     LEFT: ←
     RIGHT: →
 
-    K_CANCEL: Cancel
+    K_CANCEL: $$mdi:cancel$$
     KP_DIVIDE: $$mdi:division$$
     KP_MULTIPLY: $$mdi:multiplication$$
 
