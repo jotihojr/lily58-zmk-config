@@ -259,9 +259,8 @@ draw_config:
 
     .keypos-54 text.hold { fill: var(--color-nav); }
     .keypos-53 text.hold { fill: var(--color-fn); }
-    .keypos-55 text.hold { fill: var(--color-num); font-size: 10px; }
+    .keypos-55 text.hold { fill: var(--color-num); }
     .keypos-55 text.tap  { fill: var(--color-num); }
-    .keypos-54 text.hold { font-size: 10px; }
 
     .icon-tabler > path                             { fill: inherit; stroke: inherit; stroke-width: 2; }
     .icon-tabler > path[stroke="none"][fill="none"] { visibility: hidden; }
