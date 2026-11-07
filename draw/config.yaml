@@ -13,11 +13,21 @@ parse_config:
     "&caps_word": Caps Word
     "&kp LA(F4)": $$mdi:close-box-outline$$
 
-    "&bt BT_SEL 0": $$mdi:bluetooth$$ 1
-    "&bt BT_SEL 1": $$mdi:bluetooth$$ 2
-    "&bt BT_SEL 2": $$mdi:bluetooth$$ 3
-    "&bt BT_SEL 3": $$mdi:bluetooth$$ 4
-    "&bt BT_SEL 4": $$mdi:bluetooth$$ 5
+    "&bt BT_SEL 0":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: 1
+    "&bt BT_SEL 1":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: 2
+    "&bt BT_SEL 2":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: 3
+    "&bt BT_SEL 3":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: 4
+    "&bt BT_SEL 4":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: 5
 
     "&kp RC(TAB)": $$mdi:tab-plus$$
     "&kp RC(RS(TAB))": $$mdi:tab-minus$$
@@ -38,11 +48,11 @@ parse_config:
     "&dot_spc": Sentence
     "&num_dance": { "t": "Smart" }
     "&magic_shift": { "t": Magic, "h": "Shift" }
-    "&smart_mouse": Smart Mouse
+    "&smart_mouse": $$mdi:mouse-outline$$
 
     "&hml LS(LALT)TAB": $$mdi:keyboard-tab$$
-    "&hm_combo_ldr": Leader
-    "&hm_combo_ldrsh": Shift+Leader
+    "&hm_combo_ldr": $$mdi:alpha-l-circle-outline$$
+    "&hm_combo_ldrsh": $$mdi:alpha-l-box-outline$$
     "&hm_combo_lpar": { "t": "< (" }
     "&hm_combo_rpar": { "t": "> )" }
     "&kp LBKT": { "t": "{ [" }
@@ -86,6 +96,10 @@ parse_config:
     LSHFT: $$mdi:apple-keyboard-shift$$
     RSHFT: $$mdi:apple-keyboard-shift$$
     GLOBE: $$mdi:web$$
+
+    C_BRI_DN: $$mdi:brightness-5$$
+    C_BRI_UP: $$mdi:brightness-7$$
+    BT_CLR: $$mdi:bluetooth-off$$
 
     BSPC: $$mdi:backspace-outline$$
     DEL: $$mdi:backspace-reverse-outline$$
@@ -256,6 +270,31 @@ draw_config:
     text.tr, use.tr { fill: var(--color-nav); }
     text.bl, use.bl { fill: var(--color-num); }
     text.br, use.br { fill: var(--color-sys); }
+
+    .hold.mdi\:bluetooth {
+      translate: 26px -26px;
+    }
+    .shifted.mdi\:bluetooth-connect {
+      translate: -7px 27px;
+      scale: 1.6;
+    }
+    .tap.mdi\:bluetooth-off {
+      scale: 1.2;
+    }
+    .tap:has(+ .shifted.mdi\:bluetooth-connect) {
+      translate: 6px 0px;
+    }
+    .mdi\:chevron-left:has(+ .shifted.mdi\:bluetooth-connect) {
+      translate: -10px 0px;
+    }
+    .mdi\:chevron-left + .shifted.mdi\:bluetooth-connect {
+      translate: 6px 36px;
+    }
+    .mdi\:chevron-right + .shifted.mdi\:bluetooth-connect {
+      translate: -6px 69px;
+      scale: 1.5;
+    }
+
 
     .keypos-54 text.hold { fill: var(--color-nav); }
     .keypos-53 text.hold { fill: var(--color-fn); }
