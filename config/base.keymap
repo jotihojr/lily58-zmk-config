@@ -67,7 +67,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 // https://zmk.dev/docs/keymaps/behaviors/soft-off#configuration
 &soft_off {
 	hold-time-ms = <3000>; // Only turn off it the key is held for 5 seconds or longer.
-	/delete-property/ split-peripheral-off-on-press;
+	// /delete-property/ split-peripheral-off-on-press;
 };
 
 /* Nav cluster */
