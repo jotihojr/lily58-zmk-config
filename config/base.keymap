@@ -69,6 +69,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 	//hold-time-ms = <3000>; // Only turn off it the key is held for 5 seconds or longer.
 	// rather go with stability
 	// /delete-property/ split-peripheral-off-on-press;
+	compatible = "zmk,soft-off-wakeup-sources";
 	wakeup-sources = <&kscan0>;
 };
 
