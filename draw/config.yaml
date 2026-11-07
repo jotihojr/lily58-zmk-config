@@ -29,7 +29,8 @@ parse_config:
       shifted: $$mdi:bluetooth-connect$$
       tap: 5
 
-    "&ext_power EP_OFF": $$mdi:power$$
+    #"&ext_power EP_OFF": $$mdi:power$$
+    "&soft_off": $$mdi:power$$
 
     "&kp RC(TAB)": $$mdi:tab-plus$$
     "&kp RC(RS(TAB))": $$mdi:tab-minus$$
