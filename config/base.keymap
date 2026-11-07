@@ -65,10 +65,11 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 #include "mouse.dtsi"
 
 // https://zmk.dev/docs/keymaps/behaviors/soft-off#configuration
-&soft_off {
-	hold-time-ms = <3000>; // Only turn off it the key is held for 5 seconds or longer.
-	// /delete-property/ split-peripheral-off-on-press;
-};
+// &soft_off {
+// 	hold-time-ms = <3000>; // Only turn off it the key is held for 5 seconds or longer.
+// 	// rather go with stability
+// 	// /delete-property/ split-peripheral-off-on-press;
+// };
 
 /* Nav cluster */
 
@@ -268,9 +269,9 @@ ZMK_BASE_LAYER(syst,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                             ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     ___           ___           ___           ___           ___           &bootloader ,                               &bootloader   &kp C_BRI_DN  &kp C_BRI_UP  ___           &soft_off     ___         ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮ ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    ___           ___           ___           ___           ___           &sys_reset       ___      ,   ___           &sys_reset    ___           ___           ___           &kp C_AL_LOCK ___         ,
+    ___           ___           ___           ___           ___           &sys_reset    ___         ,   ___           &sys_reset    ___           ___           ___           &kp C_AL_LOCK ___         ,
 //╰─────────────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                              ___           ___               ___          ___      ,   ___           ___            ___           ___
+                                              ___           ___           ___           ___         ,   ___           ___           ___           ___
 //                                          ╰─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────╯
 )
 
