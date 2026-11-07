@@ -32,7 +32,8 @@ parse_config:
     #"&ext_power EP_OFF": $$mdi:power$$
     #"&soft_off": $$mdi:power$$
     #"&kp C_POWER": $$mdi:power$$
-    "&kp K_POWER": $$mdi:power$$
+    #"&kp K_POWER": $$mdi:power$$
+    "&kp C_AL_LOCK": $$mdi:power$$
 
     "&kp RC(TAB)": $$mdi:tab-plus$$
     "&kp RC(RS(TAB))": $$mdi:tab-minus$$
