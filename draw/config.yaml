@@ -29,6 +29,8 @@ parse_config:
       shifted: $$mdi:bluetooth-connect$$
       tap: 5
 
+    "&ext_power EP_OFF": $$mdi:power$$
+
     "&kp RC(TAB)": $$mdi:tab-plus$$
     "&kp RC(RS(TAB))": $$mdi:tab-minus$$
     "&kp RG(LBKT)": $$mdi:history$$
@@ -270,6 +272,11 @@ draw_config:
     text.tr, use.tr { fill: var(--color-nav); }
     text.bl, use.bl { fill: var(--color-num); }
     text.br, use.br { fill: var(--color-sys); }
+
+    .tap.mdi\:power {
+      translate: 1px -2px;
+      scale: 1.3;
+    }
 
     .hold.mdi\:bluetooth {
       translate: 26px -26px;
