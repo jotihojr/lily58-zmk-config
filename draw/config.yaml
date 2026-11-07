@@ -30,7 +30,7 @@ parse_config:
       tap: 5
 
     #"&ext_power EP_OFF": $$mdi:power$$
-    #"&soft_off": $$mdi:power$$
+    "&soft_off": $$mdi:power$$
     #"&kp C_POWER": $$mdi:power$$
     #"&kp K_POWER": $$mdi:power$$
     "&kp C_AL_LOCK": $$mdi:logout$$
@@ -277,6 +277,10 @@ draw_config:
     text.bl, use.bl { fill: var(--color-num); }
     text.br, use.br { fill: var(--color-sys); }
 
+    .tap.mdi\:power {
+      translate: 2px -2px;
+      scale: 1.2;
+    }
     .tap.mdi\:logout {
       translate: 2px -2px;
       scale: 1.2;
