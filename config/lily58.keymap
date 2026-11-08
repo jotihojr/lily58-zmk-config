@@ -18,6 +18,21 @@
                       LH               RH                            \
 	)
 
+// working on left half only
+// i'm thinking it has to do with overlapping phandles '<&kscan0>', specifically col-gpios along
+//   with col-offset within &default_transform
+// - https://github.com/zmkfirmware/zmk/blob/main/docs/docs/features/low-power-states.md
+// - https://github.com/zmkfirmware/zmk/blob/main/app/boards/shields/lily58/lily58.dtsi
+// - https://github.com/zmkfirmware/zmk/blob/main/app/boards/shields/lily58/lily58_left.overlay
+// - https://github.com/zmkfirmware/zmk/blob/main/app/boards/shields/lily58/lily58_right.overlay
+// do not know why this is happening nor how to use one or the other
+/ {
+    soft_off_wakers {
+        compatible = "zmk,soft-off-wakeup-sources";
+        wakeup-sources = <&kscan0>;
+    };
+};
+
 #define HOST_OS 2
 #define CONFIG_WIRELESS
 #define LILY58_STANDARD_LABELS
