@@ -28,6 +28,7 @@
 #define QUICK_TAP_MS 175
 
 &soft_off{
+	hold-time-ms = <2000>;
 	/delete-property/ split-peripheral-off-on-press;
 };
 
