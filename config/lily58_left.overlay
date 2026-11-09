@@ -1,4 +1,31 @@
 
+// right 
+// col-gpios = < &pro_micro 0xa 0x0 >, < &pro_micro 0x10 0x0 >, < &pro_micro 0xe 0x0 >, < &pro_micro 0xf 0x0 >, < &pro_micro 0x12 0x0 >, < &pro_micro 0x13 0x0 >;
+// &kscan0 {
+/*     col-gpios */
+/*         = <&pro_micro 10 GPIO_ACTIVE_HIGH> */
+/*         , <&pro_micro 16 GPIO_ACTIVE_HIGH> */
+/*         , <&pro_micro 14 GPIO_ACTIVE_HIGH> */
+/*         , <&pro_micro 15 GPIO_ACTIVE_HIGH> */
+/*         , <&pro_micro 18 GPIO_ACTIVE_HIGH> */
+/*         , <&pro_micro 19 GPIO_ACTIVE_HIGH> */
+/*         ; */
+/* }; */
+
+// left
+// col-gpios = < &pro_micro 0x13 0x0 >, < &pro_micro 0x12 0x0 >, < &pro_micro 0xf 0x0 >, < &pro_micro 0xe 0x0 >, < &pro_micro 0x10 0x0 >, < &pro_micro 0xa 0x0 >;
+// &kscan0 {
+/*     col-gpios */
+/*         = <&pro_micro 19 GPIO_ACTIVE_HIGH> */
+/*         , <&pro_micro 18 GPIO_ACTIVE_HIGH> */
+/*         , <&pro_micro 15 GPIO_ACTIVE_HIGH> */
+/*         , <&pro_micro 14 GPIO_ACTIVE_HIGH> */
+/*         , <&pro_micro 16 GPIO_ACTIVE_HIGH> */
+/*         , <&pro_micro 10 GPIO_ACTIVE_HIGH> */
+/*         ; */
+/* }; */
+
+
 / {
     soft_off_wakers {
         compatible = "zmk,soft-off-wakeup-sources";
