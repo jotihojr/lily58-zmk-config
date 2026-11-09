@@ -27,6 +27,10 @@
 
 #define QUICK_TAP_MS 175
 
+&soft_off{
+	/delete-property/ split-peripheral-off-on-press;
+}
+
 &sk {
   release-after-ms = <900>;
   quick-release;
