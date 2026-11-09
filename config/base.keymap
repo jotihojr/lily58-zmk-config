@@ -29,7 +29,7 @@
 
 &soft_off{
 	/delete-property/ split-peripheral-off-on-press;
-}
+};
 
 &sk {
   release-after-ms = <900>;
