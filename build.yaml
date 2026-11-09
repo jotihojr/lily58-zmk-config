@@ -18,6 +18,6 @@ include:
     #snippet: studio-rpc-usb-uart
   - board: nice_nano@2.0.0//zmk
     shield: lily58_right nice_view_adapter nice_view
-    snippet: zmk-usb-logging
-  # - board: nice_nano@2.0.0//zmk
-  #   shield: settings_reset
+#    snippet: zmk-usb-logging
+# - board: nice_nano@2.0.0//zmk
+#   shield: settings_reset
