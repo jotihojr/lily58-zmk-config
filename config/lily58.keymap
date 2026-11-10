@@ -18,11 +18,11 @@
                       LH               RH                            \
 	)
 
-// #define HOST_OS 2
 // Handedness - RALT as unidode lead
-//#define OS_UNICODE_LEAD &macro_press &kp RALT
-#define OS_UNICODE_TRAIL &macro_release &kp RALT
+#define OS_UNICODE_LEAD &macro_press &kp LALT
+#define OS_UNICODE_TRAIL &macro_release &kp LALT
 
+// #define HOST_OS 2
 #define CONFIG_WIRELESS
 #define LILY58_STANDARD_LABELS
 #include "zmk-helpers/key-labels/lily58.h"
