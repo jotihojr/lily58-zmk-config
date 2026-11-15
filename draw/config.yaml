@@ -51,7 +51,7 @@ parse_config:
 
     "&swapper": NWin
     "&kp LS(TAB)": PWin
-    "&dot_spc": Sentence
+    "&dot_spc": ""
     "&num_dance": { "t": "Smart $$mdi:pound$$" }
     "&magic_shift": { "t": $$mdi:apple-keyboard-caps$$ }
     "&smart_mouse": $$mdi:mouse-outline$$
@@ -83,7 +83,7 @@ parse_config:
   trans_legend: { "t": "", "type": "trans" }
 
   zmk_combos:
-    combo_cut: { align: bottom, o: 0.30 }
+    combo_cut: { align: bottom, o: 0.50 }
     combo_ldrsh: { align: top, o: 1.35 }
 
     combo_lt: { hidden: true }
@@ -109,7 +109,7 @@ parse_config:
 
     BSPC: $$mdi:backspace-outline$$
     DEL: $$mdi:backspace-reverse-outline$$
-    ESC: Esc
+    ESC: $$mdi:keyboard-esc$$
     RET: $$mdi:keyboard-return$$
     SPACE: $$mdi:keyboard-space$$
     TAB: $$mdi:keyboard-tab$$
@@ -245,9 +245,9 @@ draw_config:
         letter-spacing: 0.02em;
     }
 
-    text.tap     { font-weight: 500; }
-    text.hold    { font-weight: 400; font-size: 13px; }
-    text.shifted { font-weight: 400; font-size: 11px; }
+    text.tap     { font-weight: 400; }
+    text.hold    { visibility: hidden; }
+    text.shifted { font-weight: 400; font-size: 10px; }
     text.combo, text.left, text.right, text.tl, text.tr, text.bl, text.br { font-size: 10px; }
 
     text.hold, text.bl, text.br    { text-anchor: middle; dominant-baseline: auto; }
@@ -276,6 +276,9 @@ draw_config:
     text.bl, use.bl { fill: var(--color-num); }
     text.br, use.br { fill: var(--color-sys); }
 
+    .tap.mdi\:keyboard-esc {
+      scale: 1.2;
+    }
     .tap.mdi\:power {
       translate: 2px -2px;
       scale: 1.2;
@@ -322,10 +325,22 @@ draw_config:
       scale: 1.5;
     }
 
-    .keypos-54 text.hold { fill: var(--color-nav); }
-    .keypos-53 text.hold { fill: var(--color-fn); }
-    .keypos-55 text.hold { fill: var(--color-num); }
-    .keypos-55 text.tap  { fill: var(--color-num); }
+    .keypos-0 rect.key { fill: var(--color-ghost); }
+    .keypos-1 rect.key { fill: var(--color-ghost); }
+    .keypos-2 rect.key { fill: var(--color-ghost); }
+    .keypos-3 rect.key { fill: var(--color-ghost); }
+    .keypos-4 rect.key { fill: var(--color-ghost); }
+    .keypos-5 rect.key { fill: var(--color-ghost); }
+    .keypos-6 rect.key { fill: var(--color-ghost); }
+    .keypos-7 rect.key { fill: var(--color-ghost); }
+    .keypos-8 rect.key { fill: var(--color-ghost); }
+    .keypos-9 rect.key { fill: var(--color-ghost); }
+    .keypos-10 rect.key { fill: var(--color-ghost); }
+    .keypos-11 rect.key { fill: var(--color-ghost); }
+    .keypos-42 rect.key { fill: var(--color-ghost); }
+    .keypos-43 rect.key { fill: var(--color-ghost); }
+    .keypos-50 rect.key { fill: var(--color-ghost); }
+    .keypos-57 rect.key { fill: var(--color-ghost); }
 
     .icon-tabler > path                             { fill: inherit; stroke: inherit; stroke-width: 2; }
     .icon-tabler > path[stroke="none"][fill="none"] { visibility: hidden; }

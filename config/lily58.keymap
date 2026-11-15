@@ -8,14 +8,14 @@
   ╰───────────╮ 50  51  52  53 │ 54  55  56  57 ╭───────────╯ ╰───────────╮ LH3 LH2 LH1 LH0 │ RH0 RH1 RH2 RH3 ╭───────────╯
               ╰────────────────┴────────────────╯                         ╰─────────────────┴─────────────────╯             */
 
-#define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH) \
-    ZMK_LAYER(                                                       \
-        name,                                                        \
-&none &none &none &none &none &none  &none &none &none &none &none &none \
-                LT                           RT                      \
-                LM                           RM                      \
-                LB                           RB                      \
-                      LH               RH                            \
+#define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                        \
+    ZMK_LAYER(                                                                      \
+        name,                                                                       \
+&none &none &none &none &none &none             &none &none &none &none &none &none \
+                LT                                               RT                 \
+                LM                                               RM                 \
+                LB                  &none &none                  RB                 \
+            &none         LH                            RH        &none             \
 	)
 
 // Handedness - RALT as unidode lead
