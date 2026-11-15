@@ -8,8 +8,8 @@ parse_config:
     #define CONFIG_WIRELESS
 
   raw_binding_map:
-    "&sys_reset": Reset
-    "&bootloader": Boot
+    "&sys_reset": $$mdi:restart$$
+    "&bootloader": $$mdi:lightning-bolt$$
     "&caps_word": Caps Word
     "&kp LA(F4)": $$mdi:close-box-outline$$
 
@@ -52,8 +52,8 @@ parse_config:
     "&swapper": NWin
     "&kp LS(TAB)": PWin
     "&dot_spc": Sentence
-    "&num_dance": { "t": "Smart" }
-    "&magic_shift": { "t": Magic, "h": "Shift" }
+    "&num_dance": { "t": "Smart $$mdi:pound$$" }
+    "&magic_shift": { "t": $$mdi:apple-keyboard-caps$$ }
     "&smart_mouse": $$mdi:mouse-outline$$
 
     "&hml LS(LALT)TAB": $$mdi:keyboard-tab$$
@@ -83,7 +83,7 @@ parse_config:
   trans_legend: { "t": "", "type": "trans" }
 
   zmk_combos:
-    combo_cut: { align: bottom, o: 0.15 }
+    combo_cut: { align: bottom, o: 0.30 }
     combo_ldrsh: { align: top, o: 1.35 }
 
     combo_lt: { hidden: true }
@@ -196,7 +196,7 @@ parse_config:
     SINGLE_QUOTE: "'"
     SLASH: /
     SQT: "'"
-    STAR: "*"
+    STAR: $$mdi:multiplication$$
     TILDE: "~"
     TILDE2: "~"
     UNDER: _
@@ -205,30 +205,31 @@ parse_config:
 draw_config:
   append_colon_to_layer_header: false
   dark_mode: false
-  footer_text: "lily58-zmk-config"
+  footer_text: "Lily58"
   glyph_tap_size: 15
-  glyph_hold_size: 12
+  glyph_hold_size: 10
   glyph_shifted_size: 10
   legend_rel_y: 1
   outer_pad_w: 10
   outer_pad_h: 10
   small_pad: 4
+  split_gap: 10
 
   svg_style: |
     svg path { fill: inherit; }
 
     svg.keymap {
-        --color-bg:      #7c6f64;
-        --color-key:     #fbf1c7;
-        --color-text:    #3c3836;
-        --color-ghost:   #928374;
-        --color-dendron: #d5c4a1;
+        --color-bg:      #242424;
+        --color-key:     #928374;
+        --color-text:    #000000;
+        --color-ghost:   #323232;
+        --color-dendron: #928373;
         --color-held:    #bdae93;
 
-        --color-fn:      #458588;
-        --color-nav:     #d79921;
-        --color-num:     #d65d0e;
-        --color-sys:     #689d6a;
+        --color-fn:      #0437ff;
+        --color-nav:     #ff9300;
+        --color-num:     #c22515;
+        --color-sys:     #00d700;
 
         fill: var(--color-text);
         background-color: var(--color-bg);
@@ -259,9 +260,7 @@ draw_config:
 
     text.label, text.footer {
         fill: var(--color-key);
-        stroke: var(--color-bg);
-        stroke-width: 4;
-        paint-order: stroke;
+        stroke: var(--color-key);
     }
     text.label  { font-weight: bold; text-anchor: start; }
     text.footer { text-anchor: end; dominant-baseline: auto; }
@@ -284,6 +283,19 @@ draw_config:
     .tap.mdi\:logout {
       translate: 2px -2px;
       scale: 1.2;
+    }
+    .tap.mdi\:pound {
+      fill: var(--color-num);
+    }
+    .tap.mdi\:keyboard-space {
+      fill: var(--color-nav);
+    }
+    .tap.mdi\:keyboard-return {
+      fill: var(--color-fn);
+    }
+    .tap.mdi\:multiplication {
+      translate: 219px 34px;
+      scale: 0.70;
     }
 
     .hold.mdi\:bluetooth {
@@ -310,7 +322,6 @@ draw_config:
       scale: 1.5;
     }
 
-
     .keypos-54 text.hold { fill: var(--color-nav); }
     .keypos-53 text.hold { fill: var(--color-fn); }
     .keypos-55 text.hold { fill: var(--color-num); }
@@ -321,16 +332,16 @@ draw_config:
 
     @media (prefers-color-scheme: dark) {
         svg.keymap {
-            --color-bg:      #a89984;
-            --color-key:     #282828;
-            --color-text:    #ebdbb2;
-            --color-ghost:   #928374;
-            --color-dendron: #504945;
+            --color-bg:      #242424;
+            --color-key:     #928373;
+            --color-text:    #000000;
+            --color-ghost:   #323232;
+            --color-dendron: #928373;
             --color-held:    #665c54;
 
-            --color-fn:      #458588;
-            --color-nav:     #fabd2f;
-            --color-num:     #d65d0e;
-            --color-sys:     #689d6a;
+            --color-fn:      #0437ff;
+            --color-nav:     #ff9300;
+            --color-num:     #c22515;
+            --color-sys:     #00d700;
         }
     }
