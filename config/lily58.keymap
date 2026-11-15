@@ -15,7 +15,7 @@
                 LT                                               RT                 \
                 LM                                               RM                 \
                 LB                  &none &none                  RB                 \
-            &none         LH                            RH        &none             \
+            &none         LH                RH        &none                   \
 	)
 
 // Handedness - RALT as unidode lead
