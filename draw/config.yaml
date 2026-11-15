@@ -229,7 +229,7 @@ draw_config:
         --color-fn:      #0437ff;
         --color-nav:     #ff9300;
         --color-num:     #c22515;
-        --color-sys:     #00bf00;
+        --color-sys:     #00a600;
 
         fill: var(--color-text);
         background-color: var(--color-bg);
@@ -357,6 +357,6 @@ draw_config:
             --color-fn:      #0437ff;
             --color-nav:     #ff9300;
             --color-num:     #c22515;
-            --color-sys:     #00bf00;
+            --color-sys:     #00a600;
         }
     }
