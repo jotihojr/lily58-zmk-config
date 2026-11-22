@@ -32,6 +32,11 @@
 	// /delete-property/ split-peripheral-off-on-press;
 };
 
+&uc {
+	default-mode = <UC_MODE_MACOS>;
+
+};
+
 &sk {
   release-after-ms = <900>;
   quick-release;
