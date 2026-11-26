@@ -226,10 +226,10 @@ draw_config:
         --color-dendron: #928373;
         --color-held:    #bdae93;
 
-        --color-fn:      #0437ff;
+        --color-fn:      #0532E6;
         --color-nav:     #ff9300;
         --color-num:     #c22515;
-        --color-sys:     #00a600;
+        --color-sys:     #00e500;
 
         fill: var(--color-text);
         background-color: var(--color-bg);
@@ -305,8 +305,7 @@ draw_config:
       translate: 26px -26px;
     }
     .shifted.mdi\:bluetooth-connect {
-      translate: -7px 27px;
-      scale: 1.6;
+      translate: 0px 0px;
     }
     .tap.mdi\:bluetooth-off {
       scale: 1.2;
@@ -354,9 +353,9 @@ draw_config:
             --color-dendron: #928373;
             --color-held:    #665c54;
 
-            --color-fn:      #0437ff;
+            --color-fn:      #0532E6;
             --color-nav:     #ff9300;
             --color-num:     #c22515;
-            --color-sys:     #00a600;
+            --color-sys:     #00e500;
         }
     }
