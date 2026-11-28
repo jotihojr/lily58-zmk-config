@@ -220,16 +220,16 @@ draw_config:
 
     svg.keymap {
         --color-bg:      #242424;
-        --color-key:     #928374;
+        --color-key:     #dadada;
         --color-text:    #000000;
         --color-ghost:   #323232;
         --color-dendron: #928373;
         --color-held:    #bdae93;
 
-        --color-fn:      #0532E6;
-        --color-nav:     #ff9300;
-        --color-num:     #c22515;
-        --color-sys:     #00e500;
+        --color-fn:      #0532e6;
+        --color-nav:     #ff8200;
+        --color-num:     #ac1460;
+        --color-sys:     #08b05b;
 
         fill: var(--color-text);
         background-color: var(--color-bg);
@@ -347,15 +347,15 @@ draw_config:
     @media (prefers-color-scheme: dark) {
         svg.keymap {
             --color-bg:      #242424;
-            --color-key:     #928373;
+            --color-key:     #dadada;
             --color-text:    #000000;
             --color-ghost:   #323232;
             --color-dendron: #928373;
             --color-held:    #665c54;
 
-            --color-fn:      #0532E6;
-            --color-nav:     #ff9300;
-            --color-num:     #c22515;
-            --color-sys:     #00e500;
+            --color-fn:      #0532e6;
+            --color-nav:     #ff8200;
+            --color-num:     #ac1460;
+            --color-sys:     #08b05b;
         }
     }
